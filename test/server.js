@@ -13,7 +13,7 @@ describe('Test GET Product', () => {
       chai
         .request(server)
         .get('/product/listall')
-        .end((err, response) => {
+        .end((e, response) => {
           response.should.have.status(200);
           response.body.should.be.a('array');
           done();
@@ -24,7 +24,7 @@ describe('Test GET Product', () => {
       chai
         .request(server)
         .get('/product/1')
-        .end((err, response) => {
+        .end((e, response) => {
           response.should.have.status(200);
           done();
         });
